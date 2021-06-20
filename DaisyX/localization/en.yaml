@@ -163,15 +163,17 @@ STRINGS:
     cant_promote_yourself: "Anda tidak dapat mempromosikan diri anda sendiri."
     emoji_not_allowed: "Mohon maaf, tetapi gelar admin tidak dapat memiliki sebuah emoji 😞"
   pm_menu:
-    start_hi_group: 'Hei yang disana! Nama saya Roso'
-    start_hi: "Halo yang disana.. Saya adalah Bot yang dapat membantu mengelola grup Anda dengan fitur-fitur yang berguna.\nJangan ragu untuk menambahkan Saya ke grup untuk pengalaman mengelola yang menyenangkan!"
-    btn_source: "🧑‍💻 Owner"
-    btn_help: "📚 Daftar Perintah"
-    btn_channel: "🔊 Support"
-    btn_group_help: "Daftar Perintah diPM!"
+    start_hi_group: 'Hai {name}! Supaya bisa memberi pengaturan, gunakan <code>/help</code>'
+    start_hi: "Hai {name}!\n[Group Manage](https://t.me/GrupManajerBot) adalah Bot <b>yang paling lengkap</b> dan <b>gratis</b> untuk membantumu <b>mengelola</b> grup anda dengan lebih mudah dan aman!\n\n👉🏻 <b>Tambahkan saya ke Supergrup</b> dan atur saya sebagai <b>Admin</b> agar saya dapat bertindak!\n\n❓ <b>APA PERINTAHNYA?</b> ❓Tekan /help untuk melihat <b>semua perintah</b> dan bagaimana mereka bekerja!"
+    btn_source: "Informasi 💬"
+    btn_help: "➕ Tambahkan ke grup ➕"
+    btn_lang: "🇮🇩 Bahasa 🇮🇩"
+    btn_channel: "Channel 📢"
+    btn_group: "👥 Grup"
+    btn_group_help: "Penjelasan Perintah"
     back: 🔝Kembali
     #/help
-    help_header: "Inilah fitur-fitur dan pengaturan yang dapat anda gunakan, silahkan cek dan pelajarinya. Jika ada yang kurang mengerti Anda bisa bertanya atau mengirim masukan kepada owner Saya...Happy Managing🕹"
+    help_header: "Inilah fitur-fitur dan pengaturan yang dapat anda gunakan, silahkan cek dan pelajarinya..Happy Manage🕹"
     click_btn: Tekan disini
   disable:
     #/disableable
