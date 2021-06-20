@@ -44,11 +44,6 @@ def help_markup(modules):
     return markup
 
 
-STICKERS = (
-    "CAACAgUAAxkBAANEYLeEq3PCJVMX8emlyi291SFyhL0AAuICAAIf4alV-zOyTZXAC0keBA",
-)
-
-
 @register(cmds="start", no_args=True, only_groups=True)
 @disableable_dec("start")
 @get_strings_dec("pm_menu")
@@ -58,7 +53,6 @@ async def start_group_cmd(message, strings):
 
 @register(cmds="start", no_args=True, only_pm=True)
 async def start_cmd(message):
-    await message.reply_sticker(random.choice(STICKERS))
     await get_start_func(message)
 
 
@@ -71,7 +65,7 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(
             "➕ Tambahhkan ke Grup ➕",
-            url=f"https://telegram.me/RosoManage_bot?startgroup=true",
+            url=f"https://telegram.me/GrupManajerBot?startgroup=true",
     buttons.add(
         InlineKeyboardButton(strings["btn_group"], url="https://t.me/nothingspecialonhere/10"),
         InlineKeyboardButton(
@@ -81,7 +75,7 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="_btn"),
         InlineKeyboardButton(
-            strings["btn_source"], url="https://t.me/RosoOwner_bot"
+            strings["btn_source"], url="https://t.me/nothingspecialonhere"
         ),
     )
     buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
@@ -126,7 +120,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/RosoManage_bot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/GrupManajerBot?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
