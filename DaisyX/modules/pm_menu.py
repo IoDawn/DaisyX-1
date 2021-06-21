@@ -53,7 +53,6 @@ async def start_group_cmd(message, strings):
 
 @register(cmds="start", no_args=True, only_pm=True)
 async def start_cmd(message):
-    await message.reply_sticker(random.choice(STICKERS))
     await get_start_func(message)
 
 
@@ -121,7 +120,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/DaisyXBOT?start")
+        InlineKeyboardButton(text=text, url="https://t.me/grupmanagerbot?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
@@ -132,7 +131,7 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
     if not mod in MOD_HELP:
         await query.answer()
         return
-    msg = f"Help for <b>{mod}</b> module:\n"
+    msg = f"Perintah untuk <b>{mod}</b> module:\n"
     msg += f"{MOD_HELP[mod]}"
     button = InlineKeyboardMarkup().add(
         InlineKeyboardButton(text="🔙 Kembali", callback_data="get_help")
