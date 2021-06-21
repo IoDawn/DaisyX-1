@@ -3,7 +3,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from daisyxbot.modules.sql import SESSION, BASE
+from DaisyX.modules.sql import SESSION, BASE
 
 
 class Permissions(BASE):
