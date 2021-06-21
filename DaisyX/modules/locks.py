@@ -1,12 +1,5 @@
 import html
 
-from DaisyX import Message, Chat, ParseMode, MessageEntity
-from DaisyX import TelegramError, ChatPermissions
-from DaisyX.error import BadRequest
-from DaisyX.ext import CommandHandler, MessageHandler, Filters
-from DaisyX.ext.dispatcher import run_async
-from DaisyX.utils.helpers import mention_html
-
 from alphabet_detector import AlphabetDetector
 
 import DaisyX.modules.sql.locks_sql as sql
