@@ -1,11 +1,11 @@
 import html
 
-from telegram import Message, Chat, ParseMode, MessageEntity
-from telegram import TelegramError, ChatPermissions
-from telegram.error import BadRequest
-from telegram.ext import CommandHandler, MessageHandler, Filters
-from telegram.ext.dispatcher import run_async
-from telegram.utils.helpers import mention_html
+from DaisyX import Message, Chat, ParseMode, MessageEntity
+from DaisyX import TelegramError, ChatPermissions
+from DaisyX.error import BadRequest
+from DaisyX.ext import CommandHandler, MessageHandler, Filters
+from DaisyX.ext.dispatcher import run_async
+from DaisyX.utils.helpers import mention_html
 
 from alphabet_detector import AlphabetDetector
 
