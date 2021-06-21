@@ -1,7 +1,5 @@
 import html
 
-from DaisyX import AlphabetDetector
-
 import DaisyX.modules.sql.locks_sql as sql
 from DaisyX import dispatcher
 from DaisyX.modules.disable import DisableAbleCommandHandler
