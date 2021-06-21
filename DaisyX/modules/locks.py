@@ -1,6 +1,6 @@
 import html
 
-from alphabet_detector import AlphabetDetector
+from DaisyX import AlphabetDetector
 
 import DaisyX.modules.sql.locks_sql as sql
 from DaisyX import dispatcher
