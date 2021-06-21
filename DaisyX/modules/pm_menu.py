@@ -53,6 +53,7 @@ async def start_group_cmd(message, strings):
 
 @register(cmds="start", no_args=True, only_pm=True)
 async def start_cmd(message):
+    await message.reply_sticker(random.choice(STICKERS))
     await get_start_func(message)
 
 
@@ -62,23 +63,23 @@ async def get_start_func(message, strings, edit=False):
 
     task = msg.edit_text if edit else msg.reply
     buttons = InlineKeyboardMarkup()
+    buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
+    buttons.add(
+        InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
+        InlineKeyboardButton(
+            strings["btn_source"], url="https://t.me/nothingspecialonhere"
+        ),
+    )
+    buttons.add(
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/nothingspecialonhere/10"),
+        InlineKeyboardButton(
+            strings["btn_group"], url="https://t.me/nothingspecialonhere/10"
+        ),
+    )
     buttons.add(
         InlineKeyboardButton(
             "➕ Tambahkan ke grup ➕",
-            url=f"https://telegram.me/RosoManage_bot?startgroup=true",
-    buttons.add(
-        InlineKeyboardButton(strings["btn_group"], url="https://t.me/nothingspecialonhere/10"),
-        InlineKeyboardButton(
-            strings["btn_channel"], url="https://t.me/nothingspecialonhere/10"
-        ),
-    )
-    buttons.add(
-        InlineKeyboardButton(strings["btn_help"], callback_data="get_help"),
-        InlineKeyboardButton(
-            strings["btn_source"], https://t.me/nothingspecialonhere"
-        ),
-    )
-    buttons.add(InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"))
+            url=f"https://telegram.me/grupmanajerbot?startgroup=true",
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
@@ -120,7 +121,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/GrupManajerBot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/DaisyXBOT?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
@@ -131,10 +132,10 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
     if not mod in MOD_HELP:
         await query.answer()
         return
-    msg = f"Inilah perintah untuk modul <b>{mod}</b>:\n"
+    msg = f"Help for <b>{mod}</b> module:\n"
     msg += f"{MOD_HELP[mod]}"
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text="🔙Kembali", callback_data="get_help")
+        InlineKeyboardButton(text="🔙 Kembali", callback_data="get_help")
     )
     with suppress(MessageNotModified):
         await query.message.edit_text(
