@@ -166,7 +166,8 @@ STRINGS:
     start_hi_group: 'Hai {name}! Supaya bisa memberi pengaturan, gunakan <code>/help</code>'
     start_hi: "Hai {name}!\n[Group Manage](https://t.me/GrupManajerBot) adalah Bot <b>yang paling lengkap</b> dan <b>gratis</b> untuk membantumu <b>mengelola</b> grup anda dengan lebih mudah dan aman!\n\n👉🏻 <b>Tambahkan saya ke Supergrup</b> dan atur saya sebagai <b>Admin</b> agar saya dapat bertindak!\n\n❓ <b>APA PERINTAHNYA?</b> ❓Tekan /help untuk melihat <b>semua perintah</b> dan bagaimana mereka bekerja!"
     btn_source: "Informasi 💬"
-    btn_help: "➕ Tambahkan ke grup ➕"
+    btn_help: "🔧 Bantuan"
+    btn_add: ➕ Tambahkan ke grup ➕
     btn_lang: "🇮🇩 Bahasa 🇮🇩"
     btn_channel: "Channel 📢"
     btn_group: "👥 Grup"
