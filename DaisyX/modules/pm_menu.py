@@ -62,7 +62,7 @@ async def get_start_func(message, strings, edit=False):
 
     task = msg.edit_text if edit else msg.reply
     buttons = InlineKeyboardMarkup()
-    buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
+    buttons.add(InlineKeyboardButton(strings["btn_add"], url=f"https://telegram.me/grupmanajerbot?startgroup=true"))
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
@@ -75,10 +75,7 @@ async def get_start_func(message, strings, edit=False):
             strings["btn_group"], url="https://t.me/nothingspecialonhere/10"
         ),
     )
-    buttons.add(
-        InlineKeyboardButton(
-            "➕ Tambahkan ke grup ➕",
-            url=f"https://telegram.me/grupmanajerbot?startgroup=true",
+    buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
