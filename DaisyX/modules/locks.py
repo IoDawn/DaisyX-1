@@ -1,6 +1,6 @@
 import html
 
-from alphabet_detector import AlphabetDetector
+from .utils.helpers import AlphabetDetector
 from telegram import (
     Chat,
     ChatPermissions,
