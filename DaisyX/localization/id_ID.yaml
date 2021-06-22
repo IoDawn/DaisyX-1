@@ -163,18 +163,18 @@ STRINGS:
     cant_promote_yourself: "Anda tidak dapat mempromosikan diri anda sendiri."
     emoji_not_allowed: "Mohon maaf, tetapi gelar admin tidak dapat memiliki sebuah emoji 😞"
   pm_menu:
-    start_hi_group: 'Hai {first_name}! Supaya bisa memberi pengaturan, gunakan <code>/help</code>'
-    start_hi: "Hai {mention}!\n{bot_name} adalah Bot <b>yang paling lengkap</b> dan <b>gratis</b> untuk membantumu <b>mengelola</b> grup anda dengan lebih mudah dan aman!\n\n👉🏻 <b>Tambahkan saya ke Supergrup</b> dan atur saya sebagai <b>Admin</b> agar saya dapat bertindak!\n\n❓ <b>APA PERINTAHNYA?</b> ❓\nTekan /help untuk melihat <b>semua perintah</b> dan bagaimana mereka bekerja!"
+    start_hi_group: 'Hai {username}! Supaya bisa memberi pengaturan, gunakan <code>/help</code>'
+    start_hi: "Hai {username}!\n<a href=\"https://t.me/GrupManajerBot\">Group Manage</a> adalah Bot <b>yang paling lengkap</b> dan <b>gratis</b> untuk membantumu <b>mengelola</b> grup anda dengan lebih mudah dan aman!\n\n👉🏻 <b>Tambahkan saya ke Supergrup</b> dan atur saya sebagai <b>Admin</b> agar saya dapat bertindak!\n\n❓ <b>APA PERINTAHNYA?</b> ❓\nTekan /help untuk melihat <b>semua perintah</b> dan bagaimana mereka bekerja!"
     btn_source: "Informasi 💬"
     btn_help: "🔧 Bantuan"
     btn_add: ➕ Tambahkan ke grup ➕
     btn_lang: "🇮🇩 Bahasa 🇮🇩"
     btn_channel: "Channel 📢"
     btn_group: "👥 Grup"
-    btn_group_help: "Penjelasan Perintah"
+    btn_group_help: "Tekan disini"
     back: 🔝Kembali
     #/help
-    help_header: "Inilah fitur-fitur dan pengaturan yang dapat anda gunakan, silahkan cek dan pelajarinya..Happy Manage🕹"
+    help_header: "Penjelasan Perintah"
     click_btn: Tekan disini
   disable:
     #/disableable
@@ -402,7 +402,7 @@ STRINGS:
     select_pm_lang: "\n<b>Pilih bahasa baru Anda:</b>"
     select_chat_lang: "\n<b>Pilih bahasa obrolan baru:</b>"
     crowdin_btn: "🌎 Bantu kami dengan terjemahan"
-    help_us_translate: "\n\n<a href=\"https://t.me/RosoOwner_bot\">🌎 Bantu kami meningkatkan terjemahan kami</a>"
+    help_us_translate: "\n\n<a href=\"https://t.me/nothingspecialonhere\">🌎 Bantu kami meningkatkan terjemahan kami</a>"
     not_supported_lang: Bahasa ini tidak didukung!
     lang_changed: Bahasa telah diubah ke <b>{lang_name}</b>.
     see_translators: '👥 Lihat penerjemah'
@@ -412,7 +412,7 @@ STRINGS:
     connected_pm_to_me: "PM Anda telah berhasil terhubung ke <b>{chat_name}</b>! Please pm me to start using connection."
     chat_connection_tlt: "<b>Koneksi obrolan</b>\n"
     connected_chat: |
-      <b>Current connected chat:</b>
+      <b>Obrolan yang terhubung saat ini:</b>
       {chat_name}
       Ketik /disconnect untuk memutuskan sambungan dari obrolan
     "connected_chat:cmds": |
