@@ -76,7 +76,7 @@ async def get_start_func(message, strings, edit=False):
         ),
     )
     buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
-        )
+        ),
     )
     # Handle error when user click the button 2 or more times simultaneously
     with suppress(MessageNotModified):
