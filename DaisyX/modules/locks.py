@@ -1,34 +1,11 @@
 import html
 
-from .utils.helpers import AlphabetDetector
-from telegram import (
-    Chat,
-    ChatPermissions,
-    Message,
-    MessageEntity,
-    ParseMode,
-    TelegramError,
-)
-from telegram.error import BadRequest
-from telegram.ext import CommandHandler, Filters, MessageHandler
-from telegram.ext.dispatcher import run_async
-from telegram.utils.helpers import mention_html
+from pyrogram import filters
+from pyrogram.errors.exceptions.bad_request_400 import ChatNotModified
+from pyrogram.types import ChatPermissions
 
-import DaisyX.modules.sql.locks_sql as sql
-from DaisyX import DRAGONS, LOGGER, dispatcher
-from DaisyX.modules.connection import connected
-from DaisyX.modules.disable import DisableAbleCommandHandler
-from DaisyX.modules.helper_funcs.alternate import send_message, typing_action
-from DaisyX.modules.helper_funcs.chat_status import (
-    can_delete,
-    is_bot_admin,
-    is_user_admin,
-    user_admin,
-    user_not_admin,
-)
-from DaisyX.modules.log_channel import loggable
-
-ad = AlphabetDetector()
+from DaisyX.function.pluginhelpers import current_chat_permissions, member_permissions
+from DaisyX.services.pyrogram import pbot
 
 LOCK_TYPES = {
     "audio": Filters.audio,
@@ -95,26 +72,6 @@ UNLOCK_CHAT_RESTRICTION = {
 
 PERM_GROUP = 1
 REST_GROUP = 2
-
-
-# NOT ASYNC
-def restr_members(
-    bot, chat_id, members, messages=False, media=False, other=False, previews=False
-):
-    for mem in members:
-        if mem.user in DRAGONS:
-            pass
-        try:
-            bot.restrict_chat_member(
-                chat_id,
-                mem.user,
-                can_send_messages=messages,
-                can_send_media_messages=media,
-                can_send_other_messages=other,
-                can_add_web_page_previews=previews,
-            )
-        except TelegramError:
-            pass
 
 
 # NOT ASYNC
